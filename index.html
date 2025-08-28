@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>portifolio</title>
+</head>
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#INICIO" class="menu-link">INICIO</a>
+            </li>
+            <li>
+                <a href="#SOBRE" class="menu-link">SOBRE</a>
+            </li>
+            <li>
+                <a href="#PROJETOS" class="menu-link">PROJETOS</a>
+            </li>
+            <li>
+                <a href="#CONTATO" class="menu-link">CONTATO</a>
+            </li>
+        </ul>
+    </nav>
+    <Main id="inicio" class="cabecalho">
+
+    <img src="img/perfil.jpeg" alt="foto pessoal" class="foto-perfil">
+    <h1>Cristiano Informatica</h1>
+    <p class="cabecalho-sub-titulo">Desenvolvedor  Front End</p>
+
+    </Main>
+    <section id="sobre" class="sobre">
+        <h2 class="titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+              Olá,Sou um Desenvolvedor front end em formação,com experiencia em HTML,CSS E JAVASCRIPT
+            </p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+<h2 class="projetos-titulo">Meus Projetos</h2>
+<div class="projetos-caixa">
+   
+    <div class="projetos-card">
+        <img src="img/html.jpg" alt="projeto 1" class="projetos-imagem" >
+        <h3 class="info-projetos"> HTML</h3>
+        <p class="paragrafo-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat rem fugit enim ipsum tempore molestias illum, amet blanditiis? Voluptatem tempora itaque similique modi, magni ex saepe error deleniti perspiciatis aspernatur.</p>
+    </div>
+
+    <div class="projetos-card">
+        <img src="img/css.jpg" alt="projeto 2" class="projetos-imagem">
+        <h3 class="info-projetos">CSS</h3>
+        <p class="paragrafo-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores libero corporis ab debitis illo adipisci alias cupiditate repellendus unde aliquam voluptas tenetur, tempora atque temporibus. Rerum libero eveniet quo quibusdam.</p>
+    </div>
+<div class="projetos-card">
+        <img src="img/js.png" alt="projeto 3" class="projetos-imagem">
+        <h3 class="info-projetos">JAVASCRIPT</h3>
+        <p class="paragrafo-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sunt id! Earum repudiandae iusto consequuntur tempora esse impedit dolor aliquid maiores, atque provident debitis illum neque vitae inventore, laborum fugiat.</p>
+    </div>
+
+    </head>
+    
+   
+    </div>
+</div>
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+   <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+        <div class="grupo-form">
+    <input placeholder="nome" class="campo-form" id="nome">
+    </div>
+
+    <div class="grupo-form">
+    <textarea  class="campo-form" placeholder="digite sua mensagem" id="mensagem"></textarea>
+    </div>
+    <button type="submit" class="botao-form">Enviar WhatsApp</button>
+   </form>
+
+    </section>
+    <script>
+function enviarwhats(event){
+event.preventDefault();
+
+
+const nome=document.getElementById("nome").value;
+const mensagem=document.getElementById("mensagem").value;
+const telefone="5588997440260";
+
+const texto=`ola, me chamo ${nome}, ${mensagem}`;
+const msgformatada=encodeURIComponent(texto);
+const url=`https://wa.me/${telefone}?text=${msgformatada}`;
+window.open(url,"_blank");
+
+}
+    </script>
+</body>
+
+ <footer>
+        <p>Site Criado Por: Cristiano Informatica</p>
+    </footer>
+</html>
